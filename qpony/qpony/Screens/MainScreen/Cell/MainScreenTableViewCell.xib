@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="140" id="3G2-FS-fqR" customClass="MainScreenTableViewCell" customModule="qpony" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="630" height="140"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3G2-FS-fqR" id="1xA-d1-ziG">
+                <rect key="frame" x="0.0" y="0.0" width="630" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ape-f2-zFK">
+                        <rect key="frame" x="572" y="8" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7B-pG-0AE">
+                        <rect key="frame" x="16" y="37" width="42" height="37"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbf-jT-t85">
+                        <rect key="frame" x="16" y="82" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSo-er-thA">
+                        <rect key="frame" x="16" y="111" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Cbf-jT-t85" firstAttribute="top" secondItem="d7B-pG-0AE" secondAttribute="bottom" constant="8" id="3Wz-9Y-abD"/>
+                    <constraint firstItem="Cbf-jT-t85" firstAttribute="leading" secondItem="1xA-d1-ziG" secondAttribute="leading" constant="16" id="4s8-cL-4Jg"/>
+                    <constraint firstAttribute="trailing" secondItem="ape-f2-zFK" secondAttribute="trailing" constant="16" id="FD3-Ht-4IA"/>
+                    <constraint firstItem="LSo-er-thA" firstAttribute="top" secondItem="Cbf-jT-t85" secondAttribute="bottom" constant="8" id="PuT-XI-7hf"/>
+                    <constraint firstItem="ape-f2-zFK" firstAttribute="top" secondItem="1xA-d1-ziG" secondAttribute="top" constant="8" id="eWA-7n-Daw"/>
+                    <constraint firstItem="d7B-pG-0AE" firstAttribute="leading" secondItem="1xA-d1-ziG" secondAttribute="leading" constant="16" id="iX7-oX-r7j"/>
+                    <constraint firstItem="LSo-er-thA" firstAttribute="leading" secondItem="1xA-d1-ziG" secondAttribute="leading" constant="16" id="muI-zQ-7xk"/>
+                    <constraint firstItem="d7B-pG-0AE" firstAttribute="top" secondItem="ape-f2-zFK" secondAttribute="bottom" constant="8" id="nWJ-Mc-NFa"/>
+                    <constraint firstAttribute="bottom" secondItem="LSo-er-thA" secondAttribute="bottom" constant="8" id="twC-fb-bwu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="averageCourseLabel" destination="LSo-er-thA" id="Dw9-w4-PJN"/>
+                <outlet property="codeLabel" destination="Cbf-jT-t85" id="eMe-TD-bY4"/>
+                <outlet property="currencyLabel" destination="d7B-pG-0AE" id="8Ge-be-x1b"/>
+                <outlet property="effectiveDateLabel" destination="ape-f2-zFK" id="J32-eL-nz8"/>
+            </connections>
+            <point key="canvasLocation" x="108.69565217391305" y="106.47321428571428"/>
+        </tableViewCell>
+    </objects>
+</document>
