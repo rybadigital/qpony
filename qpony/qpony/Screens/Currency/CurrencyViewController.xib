@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CurrencyViewController" customModule="qpony" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="sv8-c8-r8X" id="Q2U-Cq-RkE"/>
+                <outlet property="dateFromDatePicker" destination="Qsj-UC-OD4" id="cxx-vj-ofv"/>
+                <outlet property="dateToDatePicker" destination="48Q-FY-GTP" id="p2o-YS-hze"/>
+                <outlet property="tableView" destination="VLY-Eo-ZGg" id="L23-tK-qgb"/>
+                <outlet property="view" destination="XrR-nd-KNs" id="B6A-ES-kIf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="XrR-nd-KNs">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Qsj-UC-OD4">
+                    <rect key="frame" x="16" y="89" width="382" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="EcG-Xb-nIP"/>
+                    </constraints>
+                    <connections>
+                        <action selector="didDateFromChanged:" destination="-1" eventType="valueChanged" id="A5m-jl-gd8"/>
+                    </connections>
+                </datePicker>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wybierz datę początkową" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fR3-en-hNp">
+                    <rect key="frame" x="16" y="60" width="196.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wybierz datę końcową" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pkq-4m-J9r">
+                    <rect key="frame" x="16" y="137" width="172.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="48Q-FY-GTP">
+                    <rect key="frame" x="16" y="166" width="382" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="bD8-Qx-QWx"/>
+                    </constraints>
+                    <connections>
+                        <action selector="didDateToChanged:" destination="-1" eventType="valueChanged" id="IJl-K2-Tk9"/>
+                    </connections>
+                </datePicker>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VLY-Eo-ZGg">
+                    <rect key="frame" x="0.0" y="206" width="414" height="690"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="sv8-c8-r8X">
+                    <rect key="frame" x="197" y="541" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="wGP-s9-qV4"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="VLY-Eo-ZGg" firstAttribute="leading" secondItem="wGP-s9-qV4" secondAttribute="leading" id="7Dg-dP-hYJ"/>
+                <constraint firstItem="Qsj-UC-OD4" firstAttribute="top" secondItem="fR3-en-hNp" secondAttribute="bottom" constant="8" id="BPR-Hf-Ljq"/>
+                <constraint firstItem="wGP-s9-qV4" firstAttribute="trailing" secondItem="48Q-FY-GTP" secondAttribute="trailing" constant="16" id="CSJ-iu-bZm"/>
+                <constraint firstItem="Pkq-4m-J9r" firstAttribute="leading" secondItem="wGP-s9-qV4" secondAttribute="leading" constant="16" id="Fgf-Sj-c4g"/>
+                <constraint firstItem="Pkq-4m-J9r" firstAttribute="top" secondItem="Qsj-UC-OD4" secondAttribute="bottom" constant="8" id="Ipr-Vr-IlM"/>
+                <constraint firstItem="sv8-c8-r8X" firstAttribute="centerY" secondItem="VLY-Eo-ZGg" secondAttribute="centerY" id="Je0-x6-Uo6"/>
+                <constraint firstItem="Qsj-UC-OD4" firstAttribute="leading" secondItem="wGP-s9-qV4" secondAttribute="leading" constant="16" id="Jk1-4n-h9i"/>
+                <constraint firstItem="wGP-s9-qV4" firstAttribute="trailing" secondItem="VLY-Eo-ZGg" secondAttribute="trailing" id="KFw-6Y-N6r"/>
+                <constraint firstItem="VLY-Eo-ZGg" firstAttribute="top" secondItem="48Q-FY-GTP" secondAttribute="bottom" id="QOb-kj-2Ge"/>
+                <constraint firstItem="sv8-c8-r8X" firstAttribute="centerX" secondItem="VLY-Eo-ZGg" secondAttribute="centerX" id="SBG-av-DUz"/>
+                <constraint firstItem="fR3-en-hNp" firstAttribute="leading" secondItem="wGP-s9-qV4" secondAttribute="leading" constant="16" id="Ze6-5w-Oku"/>
+                <constraint firstItem="48Q-FY-GTP" firstAttribute="top" secondItem="Pkq-4m-J9r" secondAttribute="bottom" constant="8" id="bQi-NF-k2k"/>
+                <constraint firstAttribute="bottom" secondItem="VLY-Eo-ZGg" secondAttribute="bottom" id="eTI-qH-q1L"/>
+                <constraint firstItem="wGP-s9-qV4" firstAttribute="trailing" secondItem="Qsj-UC-OD4" secondAttribute="trailing" constant="16" id="ik9-ES-5Wo"/>
+                <constraint firstItem="48Q-FY-GTP" firstAttribute="leading" secondItem="XrR-nd-KNs" secondAttribute="leading" constant="16" id="mkX-CN-MoX"/>
+                <constraint firstItem="fR3-en-hNp" firstAttribute="top" secondItem="wGP-s9-qV4" secondAttribute="top" constant="16" id="wZo-bd-h2s"/>
+            </constraints>
+            <point key="canvasLocation" x="-97.101449275362327" y="77.678571428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
